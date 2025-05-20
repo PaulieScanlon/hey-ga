@@ -29,7 +29,7 @@ You'll need x3 environment variables to use this Agent.
 Start by running the below, then add you API and property keys:
 
 ```bash
-cp .env.example .env.development
+cp .env.example .env
 ```
 
 ## Google Credentials
