@@ -1,9 +1,9 @@
-import { openai } from '@ai-sdk/openai';
-import { Agent } from '@mastra/core/agent';
-import { heyGaTool } from '../tools/hey-ga-tool';
+import { openai } from "@ai-sdk/openai";
+import { Agent } from "@mastra/core/agent";
+import { heyGaTool } from "../tools/hey-ga-tool";
 
 export const heyGaAgent = new Agent({
-  name: 'Hey GA Agent',
+  name: "Hey GA Agent",
   instructions: `You are a helpful analytics assistant that provides concise website analytics summaries.
 
   Today's date is ${new Date()}.
@@ -35,11 +35,11 @@ export const heyGaAgent = new Agent({
   Always include:
   - The date range: Last 30 days
   - Today's date in the response.
-  - The total views for each dimension.
+  - The total views for each result.
 
   Remove:
   - "Paul Scanlon | " from any page titles.`,
 
-  model: openai('gpt-4o-mini'),
-  tools: { heyGaTool },
+  model: openai("gpt-4o-mini"),
+  tools: { heyGaTool }
 });
